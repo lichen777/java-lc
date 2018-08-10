@@ -1,4 +1,5 @@
-https://leetcode.com/problems/add-two-numbers/description/
+// https://leetcode.com/problems/add-two-numbers/description/
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -7,7 +8,7 @@ https://leetcode.com/problems/add-two-numbers/description/
  *     ListNode(int x) { val = x; }
  * }
  */
-public class addTwoNumbers {
+class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         if (l1 == null || l2 == null) {
         	return l1 == null ? l2 : l1;
