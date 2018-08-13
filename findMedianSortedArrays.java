@@ -8,7 +8,7 @@ class Solution {
         }
         return ( findKth(nums1, 0, nums2, 0, n / 2) + findKth(nums1, 0, nums2, 0, n / 2 + 1) ) / 2.0;
     }
-    public int findKth (int[] nums1, int start1, int[] nums2, int start2, int k) {
+    public static int findKth (int[] nums1, int start1, int[] nums2, int start2, int k) {
     	if (start1 >= nums1.length) {
     		return nums2[start2 + k - 1];
     	}
