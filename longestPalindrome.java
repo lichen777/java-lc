@@ -3,22 +3,24 @@
 class Solution {
     public String longestPalindrome(String s) {
         String result = "";
-        if(s.length() == 0 || s == null) {
+        int length = s.length();
+        
+        if(length == 0 || s == null) {
         	return result;
         }
-        if(s.length() == 1) {
+        if(length == 1) {
         	return s;
         }
         
         int start = 0, end = 0;
         int max = 1;
-        for(int i = 0; i < s.length() - 1; i++) {
+        for(int i = 0; i < length - 1; i++) {
         	int len = 0;
         	String cur = "";
         	if(s.charAt(i) == s.charAt(i + 1)) {
         		start = i - 1;
         		end = i + 2;
-        		while (end < s.length() && s.charAt(end - 1) == s.charAt(end)) {
+        		while (end < length && s.charAt(end - 1) == s.charAt(end)) {
         			end++;
         		}
         	} else {
@@ -26,7 +28,7 @@ class Solution {
         		end = i + 1;
         	}
         	
-        	while (start >=0 && end < s.length() && s.charAt(start) == s.charAt(end)) {
+        	while (start >= 0 && end < length && s.charAt(start) == s.charAt(end)) {
         		start--;
         		end++;
         	}
