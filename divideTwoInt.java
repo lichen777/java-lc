@@ -13,7 +13,7 @@ class Solution {
         long dvs = Math.abs((long)divisor);
         int result = 0;
         while(dvd >= dvs){
-            int shift = 0;
+            int shift = 1;
             while(dvd >= (dvs << shift)){
                 shift++;
             }
